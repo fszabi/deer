@@ -6,9 +6,16 @@
   --flex-column-gap: #{size(48)};
   --flex-row-gap: #{size(48)};
 
-  p {
+  .contact {
     display: flex;
-    justify-content: center;
-    align-items: center;
-  } 
+    flex-direction: column;
+    row-gap: size(4);
+
+    p {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      column-gap: size(12);
+    }
+  }
 }
