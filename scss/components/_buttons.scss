@@ -9,26 +9,45 @@
   padding: 1.125em 2.25em;
   text-transform: uppercase;
   text-decoration: none;
+  font-family: $ff-base;
   font-weight: $fw-700;
   transition: 250ms;
 
   &--primary {
     color: clr(neutral, 900);
-    background-color: clr(primary, 400);
+    background-color: clr(accent, 400);
+
+    &:is(:hover, :focus) {
+      background-color: clr(neutral, 100);
+      color: clr(neutral, 900);
+    }
   }
 
-  &--secondary {
-    --outline-size: 5px;
+  &--hamburger {
+    z-index: 9999;
+    overflow: hidden;
+    border: 3px solid var(--hamburger-color, #fff);
+    border-radius: .5rem;
+    padding: 0;
+    background: transparent;
+   
+    --hamburger-color: #{$clr-neutral-100};
 
-    color: clr(neutral, 100);
-    background-color: transparent;
-    outline: var(--outline-size) solid clr(neutral, 100);
-    outline-offset: calc(var(--outline-size) * -1);
+    @include mqMin(medium) {
+      display: none;
+    }
+
+    img {
+      stroke: #ff00ff;
+    }
+
+    &.sticky {
+      --hamburger-color: #{$clr-primary-900};
+    }
   }
 
-  &:is(:hover, :focus) {
-    background-color: clr(neutral, 100);
-    color: clr(neutral, 900);
+  &--hamburger[data-visible="true"] {
+    --hamburger-color: #{$clr-primary-900};
   }
 
   &--scroll-top {
@@ -44,7 +63,7 @@
     background: 0;
     padding: 0;
     font-size: fs(800);
-    color: clr(primary, 400); 
+    color: clr(accent, 400); 
     transition: visibility 250ms, opacity 250ms;
 
     &.visible {

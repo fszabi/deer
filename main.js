@@ -1,12 +1,46 @@
+window.onload = events;
+
 const scrollWatcher = document.createElement("div");
 
 const header = document.querySelector(".primary-header");
+
+const navcontainer = document.querySelector(".primary-navigation-container");
+
+const nav = document.querySelector(".primary-navigation");
+
+const navlinks = document.body.querySelectorAll(".primary-navigation a");
+
+const hamburger = document.querySelector(".btn--hamburger");
 
 const scrollButton = document.querySelector(".btn--scroll-top");
 
 scrollWatcher.setAttribute("data-scroll-watcher", "");
 
 header.before(scrollWatcher);
+
+// Header
+
+scrollWatcher.setAttribute("data-scroll-watcher", "");
+
+header.before(scrollWatcher);
+
+const headerObserver = new IntersectionObserver(
+  (entries) => {
+    console.log(entries);
+
+    // Toggle header color, box-shadow and navigation links color
+
+    header.classList.toggle("sticky", !entries[0].isIntersecting);
+    header.classList.toggle("box-shadow-1", !entries[0].isIntersecting);
+    hamburger.classList.toggle("sticky", !entries[0].isIntersecting);
+    for (var i = 0; i < navlinks.length; i++) {
+      navlinks[i].classList.toggle("sticky", !entries[0].isIntersecting);
+    }
+  },
+  { rootMargin: "100px 0px 0px 0px" }
+);
+
+headerObserver.observe(scrollWatcher);
 
 // Scroll top button
 
@@ -31,3 +65,79 @@ const scrollButtonObserver = new IntersectionObserver(
 );
 
 scrollButtonObserver.observe(scrollWatcher);
+
+// Events on load
+
+function events() {
+  for (var i = 0; i < navlinks.length; i++) {
+    navlinks[i].addEventListener("click", () => {
+      const currentState = hamburger.getAttribute("data-state");
+      const visibility =
+        nav.getAttribute("data-visible") &&
+        navcontainer.getAttribute("data-visible") &&
+        hamburger.getAttribute("data-visible");
+
+      if (!currentState || currentState === "closed") {
+        hamburger.setAttribute("data-state", "opened");
+        hamburger.setAttribute("aria-expanded", "true");
+      } else {
+        hamburger.setAttribute("data-state", "closed");
+        hamburger.setAttribute("aria-expanded", "false");
+      }
+
+      if (visibility === "false") {
+        navcontainer.setAttribute("data-visible", "true");
+        nav.setAttribute("data-visible", "true");
+        hamburger.setAttribute("data-visible", "true");
+      } else {
+        navcontainer.setAttribute("data-visible", "false");
+        nav.setAttribute("data-visible", "false");
+        hamburger.setAttribute("data-visible", "false");
+      }
+    });
+  }
+
+  hamburger.addEventListener("click", () => {
+    const currentState = hamburger.getAttribute("data-state");
+    const visibility =
+      nav.getAttribute("data-visible") &&
+      navcontainer.getAttribute("data-visible") &&
+      hamburger.getAttribute("data-visible");
+
+    if (!currentState || currentState === "closed") {
+      hamburger.setAttribute("data-state", "opened");
+      hamburger.setAttribute("aria-expanded", "true");
+    } else {
+      hamburger.setAttribute("data-state", "closed");
+      hamburger.setAttribute("aria-expanded", "false");
+    }
+
+    if (visibility === "false") {
+      navcontainer.setAttribute("data-visible", "true");
+      nav.setAttribute("data-visible", "true");
+      hamburger.setAttribute("data-visible", "true");
+    } else {
+      navcontainer.setAttribute("data-visible", "false");
+      nav.setAttribute("data-visible", "false");
+      hamburger.setAttribute("data-visible", "false");
+    }
+  });
+
+  document
+    .querySelectorAll("input[required], textarea[required]")
+    .forEach((e) => {
+      e.addEventListener("focusout", () => {
+        e.style.borderColor = !!e.value
+          ? "var(--clr-neutral-100)"
+          : "var(--clr-primary-300)";
+      });
+    });
+
+  document.querySelectorAll("input[type='email']").forEach((e) => {
+    e.addEventListener("focusout", () => {
+      e.style.borderColor = !!e.value.includes("@")
+        ? "var(--clr-neutral-100)"
+        : "var(--clr-primary-300)";
+    });
+  });
+}

@@ -6,7 +6,24 @@ $colors: (
     100: #ffffff,
   ),
   primary: (
-    400: #ff6635,
-    500: #dd4e11,
+    400: #f6e8da,
+    500: #f1e1d1,
+    900: #100a04,
+  ),
+  accent: (
+    400: #609ed7,
+    500: #2a6ba7,
   ),
 );
+
+$clr-neutral-100: #ffffff;
+$clr-neutral-200: #f8f8f8;
+$clr-neutral-400: #5c5c5c;
+$clr-neutral-900: #212121;
+
+$clr-primary-400: #f6e8da;
+$clr-primary-500: #f1e1d1;
+$clr-primary-900: #100a04;
+
+$clr-accent-400: #609ed7;
+$clr-accent-500: #2a6ba7;

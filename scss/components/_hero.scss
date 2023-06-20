@@ -1,6 +1,19 @@
+@use "../abstracts/" as *;
+
 .hero {
-  height: 100vh;
+  min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: gradients(linear, 900),
+  url("../assets/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero {
+  background-image: gradients(linear, 900),
+  -webkit-image-set(url("../assets/hero.webp") 1x);
 }
