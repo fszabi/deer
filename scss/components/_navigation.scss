@@ -3,13 +3,8 @@
 .primary-navigation {
   --flex-column-gap: #{size(48)};
 
-  ul {
-    list-style: none;
-  }
-
   a {
-    text-decoration: none;
-    color: clr(neutral, 100);
+    color: clr(primary, 400);
     transition: opacity 250ms;
     font-size: fs(500);
 
@@ -56,5 +51,16 @@
 
   a {
     color: clr(primary, 900);
+  }
+}
+
+.secondary-navigation {
+  a {
+    font-size: fs(500);
+    transition: opacity 250ms;
+  
+    &:is(:hover, :focus) {
+      opacity: .7;
+    }
   }
 }
