@@ -1,0 +1,9 @@
+@use "../abstracts/" as *;
+
+.mirrored {
+  @include mqMin(medium) {
+    div:first-child {
+      order: 2;
+    }
+  }
+}

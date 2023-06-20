@@ -1,0 +1,18 @@
+@use "../abstracts/" as *;
+
+.primary-footer {
+  --grid-gap: #{size(80)};
+
+  --flex-column-gap: #{size(48)};
+  --flex-row-gap: #{size(48)};
+
+  h2, h3 {
+    color: clr(primary, 400);
+  }
+
+  p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } 
+}

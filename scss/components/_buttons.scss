@@ -1,0 +1,55 @@
+@use "../abstracts/" as *;
+
+.btn {
+  display: block;
+  border: 0;
+  border-radius: 50px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 1.125em 2.25em;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: $fw-700;
+  transition: 250ms;
+
+  &--primary {
+    color: clr(neutral, 900);
+    background-color: clr(primary, 400);
+  }
+
+  &--secondary {
+    --outline-size: 5px;
+
+    color: clr(neutral, 100);
+    background-color: transparent;
+    outline: var(--outline-size) solid clr(neutral, 100);
+    outline-offset: calc(var(--outline-size) * -1);
+  }
+
+  &:is(:hover, :focus) {
+    background-color: clr(neutral, 100);
+    color: clr(neutral, 900);
+  }
+
+  &--scroll-top {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    border: 0;
+    background: 0;
+    padding: 0;
+    font-size: fs(800);
+    color: clr(primary, 400); 
+    transition: visibility 250ms, opacity 250ms;
+
+    &.visible {
+      visibility: visible;
+      opacity: 0.7;
+    }
+  }
+}

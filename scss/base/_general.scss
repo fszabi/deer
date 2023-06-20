@@ -1,0 +1,37 @@
+@use "../abstracts/" as *;
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 10rem;
+}
+
+body {
+  font: {
+    family: $ff-base;
+    size: fs(400);
+    weight: $fw-400;
+  }
+  line-height: 1.6;
+  color: clr(neutral, 400);
+}
+
+::-webkit-scrollbar {
+  width: size(8);
+  background-color: clr(neutral, 900);
+}
+
+::-webkit-scrollbar-track {
+  margin-block: size(8);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: clr(primary, 400);
+  border-radius: 100vw;
+}
+
+@supports (scrollbar-color: clr(primary, 400) clr(neutral, 900)) {
+  * {
+    scrollbar-color: clr(primary, 400) clr(neutral, 900);
+    scrollbar-width: thin;
+  }
+}
