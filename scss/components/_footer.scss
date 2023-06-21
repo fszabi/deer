@@ -4,7 +4,7 @@
   .grid {
     display: grid;
     grid-auto-columns: 1fr;
-    gap: size(80);
+    gap: size(48);
     
     @include mqMin(medium) {
       grid-template-columns: auto 1fr;
