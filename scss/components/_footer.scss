@@ -3,8 +3,13 @@
 .primary-footer {
   .grid {
     display: grid;
-    grid-template-columns: auto 1fr;
-    gap: size(160);
+    grid-auto-columns: 1fr;
+    gap: size(80);
+    
+    @include mqMin(medium) {
+      grid-template-columns: auto 1fr;
+      gap: size(160);
+    }
   }
 
   .contact {

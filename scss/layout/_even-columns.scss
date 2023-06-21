@@ -4,6 +4,14 @@
   display: grid;
   gap: var(--grid-gap, $grid-gap);
 
+  &.justify-center {
+    justify-items: center;
+  }
+
+  &.align-center {
+    align-items: center;
+  }
+
   @include mqMin(medium) {
     grid-auto-flow: column;
     grid-auto-columns: 1fr;
@@ -18,6 +26,10 @@
   }
   
   &.col-3 {
+    @include mqMin(small) {
+      grid-template-columns: 1fr 1fr;
+    }
+
     @include mqMin(medium) {
       grid-auto-flow: row;
       grid-template-columns: 1fr 1fr 1fr;

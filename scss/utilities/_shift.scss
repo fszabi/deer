@@ -9,9 +9,18 @@
 
 .shift-up-left {
   transform: translateY(0%) translateX(0%);
-  transition: transform 250ms;
+  transition: transform 250ms, opacity 250ms;
 
   &:hover {
     transform: translateY(-2%) translateX(-2%);
+  }
+
+  &.opacity {
+    opacity: 1;
+    transition: transform 250ms, opacity 250ms;
+
+    &:hover {
+      opacity: 0.7;
+    }
   }
 }

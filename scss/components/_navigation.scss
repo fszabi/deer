@@ -9,7 +9,7 @@
     font-size: fs(500);
 
     &:is(:hover, :focus) {
-      opacity: .7;
+      opacity: .5;
     }
 
     &.sticky {
@@ -60,7 +60,7 @@
     transition: opacity 250ms;
   
     &:is(:hover, :focus) {
-      opacity: .7;
+      opacity: .5;
     }
   }
 }
