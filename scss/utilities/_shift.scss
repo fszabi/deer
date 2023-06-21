@@ -1,0 +1,17 @@
+.shift-up {
+  transform: translateY(0%);
+  transition: transform 250ms;
+
+  &:hover {
+    transform: translateY(-2%);
+  }
+}
+
+.shift-up-left {
+  transform: translateY(0%) translateX(0%);
+  transition: transform 250ms;
+
+  &:hover {
+    transform: translateY(-2%) translateX(-2%);
+  }
+}

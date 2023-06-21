@@ -39,23 +39,36 @@
           aria-expanded="false"
         >
           <span class="visually-hidden">Navigációs menü</span>
+
           <svg
-            width="32px"
-            height="32px"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
+            class="hamburger-icon"
+            stroke="var(--hamburger-color, #fff)"
+            viewBox="0 0 100 100"
+            width="32"
           >
-            <g id="Menu / Menu_Duo_LG">
-              <path
-                id="Vector"
-                d="M3 15H21M3 9H21"
-                stroke="var(--hamburger-color, #fff)"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </g>
+            <line
+              class="line top"
+              x1="85"
+              x2="15"
+              y1="40"
+              y2="40"
+              stroke-width="10"
+              stroke-linecap="round"
+              stroke-dasharray="80"
+              stroke-dashoffset="0"
+            ></line>
+
+            <line
+              class="line bottom"
+              x1="15"
+              x2="85"
+              y1="60"
+              y2="60"
+              stroke-width="10"
+              stroke-linecap="round"
+              stroke-dasharray="80"
+              stroke-dashoffset="0"
+            ></line>
           </svg>
         </button>
 
@@ -91,59 +104,207 @@
         </div>
       </section>
 
-      <section id="szolgaltatasaink" class="section | bg-primary-500">
-        <div class="container">
+      <section id="rolunk" class="about section | bg-primary-400">
+        <div class="container" data-type="wide">
           <header class="section-header">
-            <h2 class="fs-800 fw-700 ff-accent text-center">
-              Szolgáltatásaink
+            <h2 class="fs-800 fw-700 ff-accent">
+              Ismerj meg <span class="decoration-1">minket</span>
             </h2>
           </header>
+          <div class="even-columns">
+            <div>
+              <img
+                src="https://picsum.photos/1000/800"
+                class="shift-up-left box-shadow-1 border-radius-1"
+                alt="about photo"
+              />
+            </div>
+            <div>
+              <h3 class="fs-600 clr-accent-500">Lorem ipsum dolor, sit amet</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
+                quas minus dolores assumenda laboriosam? Commodi, porro iure? Ad
+                totam animi similique recusandae beatae eum, repellendus sed
+                iste inventore impedit veniam.
+              </p>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Voluptatem, voluptas tenetur laudantium, tempora beatae
+                inventore incidunt accusamus aspernatur dolorum error fugit
+                officia officiis commodi ab nihil, culpa reiciendis quibusdam
+                optio?
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="szolgaltatasaink" class="services section | bg-primary-400">
+        <div class="container" data-type="wide">
+          <header class="section-header">
+            <h2 class="fs-800 fw-700 ff-accent">
+              A cég <span class="decoration-1">szolgáltatásai</span>
+            </h2>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime
+              animi ipsum tempora aliquam omnis sapiente corrupti repellendus
+              assumenda repellat facilis.
+            </p>
+          </header>
+          <div class="even-columns">
+            <div
+              class="flow | shift-up border-radius-1 box-shadow-1 padding-32 bg-primary-500"
+            >
+              <i class="fa-solid fa-monument | clr-accent-500"></i>
+              <h3 class="fs-600 clr-accent-500">Lorem ipsum dolor sit</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Tempore, repellat. Fuga qui voluptas commodi atque tempora
+                eligendi ex ea minus perspiciatis, eos excepturi dicta ad
+                aperiam. Eum vero harum iste?
+              </p>
+            </div>
+            <div
+              class="flow | shift-up border-radius-1 box-shadow-1 padding-32 bg-primary-500"
+            >
+              <i class="fa-solid fa-church | clr-accent-500"></i>
+              <h3 class="fs-600 clr-accent-500">Lorem ipsum dolor sit</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Tempore, repellat. Fuga qui voluptas commodi atque tempora
+                eligendi ex ea minus perspiciatis, eos excepturi dicta ad
+                aperiam. Eum vero harum iste?
+              </p>
+              <p></p>
+            </div>
+            <div
+              class="flow | shift-up border-radius-1 box-shadow-1 padding-32 bg-primary-500"
+            >
+              <i class="fa-solid fa-cross | clr-accent-500"></i>
+              <h3 class="fs-600 clr-accent-500">Lorem ipsum dolor sit</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Tempore, repellat. Fuga qui voluptas commodi atque tempora
+                eligendi ex ea minus perspiciatis, eos excepturi dicta ad
+                aperiam. Eum vero harum iste?
+              </p>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="referenciak" class="references section bg-primary-400">
+        <div class="container" data-type="wide">
+          <header class="section-header">
+            <h2 class="fs-800 fw-700 ff-accent">
+              Eddigi <span class="decoration-1">munkáink</span>
+            </h2>
+          </header>
+          <div class="even-columns col-3">
+            <div>
+              <img
+                class="border-radius-2 box-shadow-1"
+                src="https://picsum.photos/400/300"
+                alt="reference1"
+              />
+            </div>
+            <div>
+              <img
+                class="border-radius-2 box-shadow-1"
+                src="https://picsum.photos/400/300"
+                alt="reference2"
+              />
+            </div>
+            <div>
+              <img
+                class="border-radius-2 box-shadow-1"
+                src="https://picsum.photos/400/300"
+                alt="reference3"
+              />
+            </div>
+            <div>
+              <img
+                class="border-radius-2 box-shadow-1"
+                src="https://picsum.photos/400/300"
+                alt="reference4"
+              />
+            </div>
+            <div>
+              <img
+                class="border-radius-2 box-shadow-1"
+                src="https://picsum.photos/400/300"
+                alt="reference5"
+              />
+            </div>
+            <div>
+              <img
+                class="border-radius-2 box-shadow-1"
+                src="https://picsum.photos/400/300"
+                alt="reference6"
+              />
+            </div>
+          </div>
         </div>
       </section>
     </main>
     <footer id="elerhetosegek" class="primary-footer section | bg-primary-400">
-      <div class="container flow | text-center">
+      <div class="container" data-type="wide">
         <header class="section-header">
-          <h2 class="fs-800 fw-700 ff-accent">Elérhetőségek</h2>
+          <h2 class="fs-800 fw-700 ff-accent">
+            Lépj velünk <span class="decoration-1">kapcsolatba</span>
+          </h2>
         </header>
-        <div class="even-columns">
-          <div class="flow" data-spacing="large">
-            <h3 class="fs-600 clr-accent-500">Kapcsolat</h3>
+        <div class="grid">
+          <div class="flow" data-spacing="extra-large">
+            <div>
+              <h3 class="fs-600 clr-accent-500">Kapcsolat</h3>
 
-            <div class="contact">
-              <p class="fs-500">
-                <i class="fa-solid fa-user | clr-accent-500"></i>
-                Ügyvezető: Deér Zoltán
-              </p>
-              <p class="fs-500">
-                <i class="fa-solid fa-phone | clr-accent-500"></i>
-                +36 30 182 9318
-              </p>
-              <p class="fs-500">
-                <i class="fa-solid fa-envelope | clr-accent-500"></i>
-                deerzoli@gmail.com
-              </p>
-              <p class="fs-500">
-                <i class="fa-solid fa-location-dot | clr-accent-500"></i>
-                Máriakéménd, 7633, <br />
-                Horváth u. 22.
-              </p>
+              <div class="contact | margin-top-16">
+                <p class="fs-500">
+                  <i class="fa-solid fa-user | clr-accent-500"></i>
+                  Ügyvezető: Deér Zoltán
+                </p>
+                <p class="fs-500">
+                  <i class="fa-solid fa-phone | clr-accent-500"></i>
+                  +36 30 182 9318
+                </p>
+                <p class="fs-500">
+                  <i class="fa-solid fa-envelope | clr-accent-500"></i>
+                  deerzoli@gmail.com
+                </p>
+                <p class="fs-500">
+                  <i class="fa-solid fa-location-dot | clr-accent-500"></i>
+                  Máriakéménd, 7663, <br />
+                  Horváth u. 22.
+                </p>
+              </div>
             </div>
-          </div>
-          <nav class="flow" data-spacing="large">
-            <h3 class="fs-600 clr-accent-500">Navigáció</h3>
 
-            <ul class="secondary-navigation">
-              <li><a href="#rolunk">Rólunk</a></li>
-              <li><a href="#szolgaltatasaink">Szolgáltatásaink</a></li>
-              <li><a href="#referenciak">Referenciák</a></li>
-              <li><a href="#elerhetosegek">Elérhetőségek</a></li>
-            </ul>
-          </nav>
+            <nav>
+              <h3 class="fs-600 clr-accent-500">Navigáció</h3>
+
+              <ul class="secondary-navigation | margin-top-16">
+                <li><a href="#rolunk">Rólunk</a></li>
+                <li><a href="#szolgaltatasaink">Szolgáltatásaink</a></li>
+                <li><a href="#referenciak">Referenciák</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <iframe
+            class="map | border-radius-2 box-shadow-1"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2770.220496655009!2d18.458910499999998!3d46.0267489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4742c942d55255df%3A0x7f5b71cc6230e433!2zTcOhcmlha8OpbcOpbmQsIEhvcnbDoXRoIHUuIDIyLCA3NjYz!5e0!3m2!1shu!2shu!4v1687346142831!5m2!1shu!2shu"
+            width="100%"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
       </div>
       <button class="btn btn--scroll-top">
-        <i class="fa-solid fa-circle-arrow-up"></i>
+        <i class="fa-solid fa-circle-up"></i>
         <span class="visually-hidden"> Görgetés az oldal tetejére </span>
       </button>
     </footer>

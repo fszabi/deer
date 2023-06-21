@@ -8,4 +8,21 @@
     grid-auto-flow: column;
     grid-auto-columns: 1fr;
   }
+
+  &.col-2 {
+    @include mqMin(medium) {
+      grid-auto-flow: row;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+    }
+  }
+  
+  &.col-3 {
+    @include mqMin(medium) {
+      grid-auto-flow: row;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+  }
 }
+

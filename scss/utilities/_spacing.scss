@@ -35,6 +35,18 @@
     &-inline-#{$size-name} {
       margin-inline: $size-value;
     }
+    &-top-#{$size-name} {
+      margin-top: $size-value;
+    }
+    &-right-#{$size-name} {
+      margin-right: $size-value;
+    }
+    &-bottom-#{$size-name} {
+      margin-bottom: $size-value;
+    }
+    &-left-#{$size-name} {
+      margin-left: $size-value;
+    }
   }
   
   .padding {
@@ -58,6 +70,18 @@
     }
     &-inline-#{$size-name} {
       padding-inline: $size-value;
+    }
+    &-top-#{$size-name} {
+      padding-top: $size-value;
+    }
+    &-right-#{$size-name} {
+      padding-right: $size-value;
+    }
+    &-bottom-#{$size-name} {
+      padding-bottom: $size-value;
+    }
+    &-left-#{$size-name} {
+      padding-left: $size-value;
     }
   }
 }

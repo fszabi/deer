@@ -1,21 +1,44 @@
 @use "../abstracts/" as *;
 
 .primary-footer {
-  --grid-gap: #{size(80)};
-
-  --flex-column-gap: #{size(48)};
-  --flex-row-gap: #{size(48)};
+  .grid {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: size(160);
+  }
 
   .contact {
     display: flex;
     flex-direction: column;
-    row-gap: size(4);
+    row-gap: size(12);
 
     p {
       display: flex;
-      justify-content: center;
       align-items: center;
       column-gap: size(12);
+    }
+  }
+
+  .map {
+    @include mqMax(medium) {
+      margin-top: size(60);
+    }
+  }
+
+  .container {
+    i {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: clr(accent, 300);
+      width: 30px;
+      height: 30px;
+      padding: 1.5rem;
+      border-radius: 50%;
+      box-shadow:
+      0px 6px 5px rgb(0, 0, 0, 0.02),
+      0px 22px 18px rgb(0, 0, 0, 0.03),
+      0px 100px 80px rgb(0, 0, 0, 0.05);
     }
   }
 }

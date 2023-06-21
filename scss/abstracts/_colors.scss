@@ -7,10 +7,11 @@ $colors: (
   ),
   primary: (
     400: #f6e8da,
-    500: #f1e1d1,
+    500: #f3e2d1,
     900: #100a04,
   ),
   accent: (
+    300: #609ed73a,
     400: #609ed7,
     500: #2a6ba7,
   ),
@@ -25,5 +26,6 @@ $clr-primary-400: #f6e8da;
 $clr-primary-500: #f1e1d1;
 $clr-primary-900: #100a04;
 
+$clr-accent-300: #609ed73a;
 $clr-accent-400: #609ed7;
 $clr-accent-500: #2a6ba7;

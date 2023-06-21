@@ -1,13 +1,14 @@
 @use "../abstracts/" as *;
 
 .section-header {
-  margin-block-end: size(36) * 1.5;
+  margin-block-end: size(80);
 
   h2 {
     color: clr(accent, 500);
   }
 
   p {
+    margin-top: .75em;
     max-width: 50ch;
 
     .text-center & {

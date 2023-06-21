@@ -30,15 +30,75 @@
     border-radius: .5rem;
     padding: 0;
     background: transparent;
+    transition: border 250ms;
+    
    
     --hamburger-color: #{$clr-neutral-100};
 
-    @include mqMin(medium) {
-      display: none;
+    &[data-state="closed"] :is(.top, .bottom) {
+      animation: to-open-icon 1s forwards;
+      transition: stroke 250ms;
     }
 
-    img {
-      stroke: #ff00ff;
+    &[data-state="opened"] :is(.top, .bottom) {
+      animation: to-close-icon 1s forwards;
+    }
+
+    & .hamburger-icon {
+      transition: rotate 800ms 200ms;
+    }
+
+    &[data-state="opened"] .hamburger-icon {
+      rotate: 1turn;
+    }
+
+    & .line.top {
+      --rotation: -45deg;
+      transform-origin: 65px 45px;
+    }
+
+    & .line.bottom {
+      --rotation: 45deg;
+      transform-origin: 60px 55px;
+    }
+
+    
+    @keyframes to-open-icon {
+      0% {
+        stroke-dashoffset: 0;
+        rotate: var(--rotation);
+      }
+      40% {
+        stroke-dashoffset: 79.9;
+        rotate: var(--rotation);
+      }
+      60% {
+        stroke-dashoffset: 79.9;
+      }
+      100% {
+        stroke-dashoffset: 0;
+      }
+    }
+
+    @keyframes to-close-icon {
+      0% {
+        stroke-dashoffset: 0;
+      }
+      40% {
+        stroke-dashoffset: 79.9;
+      }
+      60% {
+        stroke-dashoffset: 79.9;
+        rotate: var(--rotation);
+      }
+      100% {
+        stroke-dashoffset: 0;
+        rotate: var(--rotation);
+      }
+    }
+
+    @include mqMin(medium) {
+      display: none;
     }
 
     &.sticky {
@@ -46,7 +106,7 @@
     }
   }
 
-  &--hamburger[data-visible="true"] {
+  &--hamburger[data-state="opened"] {
     --hamburger-color: #{$clr-primary-900};
   }
 
@@ -68,7 +128,7 @@
 
     &.visible {
       visibility: visible;
-      opacity: 0.7;
+      opacity: 1;
     }
   }
 }

@@ -1,0 +1,7 @@
+@use "../abstracts/" as *;
+
+.decoration-1 {
+  background-color: clr(accent, 300);
+  border-radius: 5px;
+  padding: .5rem 1rem;
+}

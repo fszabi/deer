@@ -74,8 +74,7 @@ function events() {
       const currentState = hamburger.getAttribute("data-state");
       const visibility =
         nav.getAttribute("data-visible") &&
-        navcontainer.getAttribute("data-visible") &&
-        hamburger.getAttribute("data-visible");
+        navcontainer.getAttribute("data-visible");
 
       if (!currentState || currentState === "closed") {
         hamburger.setAttribute("data-state", "opened");
@@ -88,11 +87,9 @@ function events() {
       if (visibility === "false") {
         navcontainer.setAttribute("data-visible", "true");
         nav.setAttribute("data-visible", "true");
-        hamburger.setAttribute("data-visible", "true");
       } else {
         navcontainer.setAttribute("data-visible", "false");
         nav.setAttribute("data-visible", "false");
-        hamburger.setAttribute("data-visible", "false");
       }
     });
   }
@@ -101,8 +98,7 @@ function events() {
     const currentState = hamburger.getAttribute("data-state");
     const visibility =
       nav.getAttribute("data-visible") &&
-      navcontainer.getAttribute("data-visible") &&
-      hamburger.getAttribute("data-visible");
+      navcontainer.getAttribute("data-visible");
 
     if (!currentState || currentState === "closed") {
       hamburger.setAttribute("data-state", "opened");
@@ -112,14 +108,12 @@ function events() {
       hamburger.setAttribute("aria-expanded", "false");
     }
 
-    if (visibility === "false") {
+    if (!visibility | (visibility === "false")) {
       navcontainer.setAttribute("data-visible", "true");
       nav.setAttribute("data-visible", "true");
-      hamburger.setAttribute("data-visible", "true");
     } else {
       navcontainer.setAttribute("data-visible", "false");
       nav.setAttribute("data-visible", "false");
-      hamburger.setAttribute("data-visible", "false");
     }
   });
 
