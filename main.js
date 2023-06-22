@@ -14,9 +14,15 @@ const hamburger = document.querySelector(".btn--hamburger");
 
 const scrollButton = document.querySelector(".btn--scroll-top");
 
+const body = document.querySelector("body");
+
 const references = document.body.querySelectorAll(".reference");
 
-const popupimage = document.querySelector(".popup-image");
+const referenceimages = document.body.querySelectorAll(".reference img");
+
+const popup = document.querySelector(".popup-image");
+
+const popupimage = document.querySelector(".popup-image img");
 
 const close = document.querySelector(".popup-image span");
 
@@ -141,13 +147,18 @@ function events() {
     });
   });
 
-  references.forEach((image) => {
+  referenceimages.forEach((image) => {
     image.addEventListener("click", () => {
-      popupimage.style.display = "block";
+      popup.style.visibility = "visible";
+      popup.style.opacity = "1";
+      body.style.overflow = "hidden";
+      popupimage.src = image.getAttribute("src");
     });
   });
 
   close.addEventListener("click", () => {
-    popupimage.style.display = "none";
+    popup.style.visibility = "hidden";
+    popup.style.opacity = "0";
+    body.style.overflow = "visible";
   });
 }
