@@ -1,3 +1,8 @@
 .logo {
-  width: 70px;
+  width: 100px;
+  transition: width 250ms;
+
+  &.sticky {
+    width: 70px;
+  }
 }
