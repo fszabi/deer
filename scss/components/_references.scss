@@ -1,3 +1,68 @@
+@use "../abstracts/" as *;
+
 .references {
   --grid-gap: 3rem;
+
+  .container {
+    position: relative;
+  }
+
+  .reference {
+    display: grid;
+    grid-template-areas: "stack";
+    place-items: center;
+    position: relative;
+    cursor: pointer;
+    
+    & > img,
+    & > p {
+      grid-area: stack;
+    }
+
+    &:hover p {
+      opacity: 1;
+    }
+
+    p {
+      color: clr(accent, 500);
+      opacity: 0;
+      z-index: 999;
+      transition: opacity 250ms;
+      font-weight: $fw-700;
+      font-family: $ff-accent;
+    }
+  }
+
+  .popup-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgb(0, 0, 0, .9);
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: 5px solid clr(accent, 500);
+      border-radius: 10px;
+      width: 750px;
+      max-width: 90%;
+    }
+
+    span {
+      position: absolute;
+      top: 0;
+      right: 10px;
+      z-index: 100;
+      font-size: fs(900);
+      line-height: 1;
+      color: clr(accent, 500);
+      cursor: pointer;
+    }
+  }
 }

@@ -14,6 +14,12 @@ const hamburger = document.querySelector(".btn--hamburger");
 
 const scrollButton = document.querySelector(".btn--scroll-top");
 
+const references = document.body.querySelectorAll(".reference");
+
+const popupimage = document.querySelector(".popup-image");
+
+const close = document.querySelector(".popup-image span");
+
 scrollWatcher.setAttribute("data-scroll-watcher", "");
 
 header.before(scrollWatcher);
@@ -133,5 +139,15 @@ function events() {
         ? "var(--clr-neutral-100)"
         : "var(--clr-primary-300)";
     });
+  });
+
+  references.forEach((image) => {
+    image.addEventListener("click", () => {
+      popupimage.style.display = "block";
+    });
+  });
+
+  close.addEventListener("click", () => {
+    popupimage.style.display = "none";
   });
 }
