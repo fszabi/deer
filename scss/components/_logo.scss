@@ -1,20 +1,9 @@
 @use "../abstracts/" as *;
 
 .logo {
-  display: flex;
-  gap: 2em;
-  align-items: center;
-  justify-content: center;
+  color: clr(primary, 400);
 
-  .logo-img {
-    width: 50px;
-  }
-  
-  .logo-text {
-    color: clr(primary, 400);
-
-    &.sticky {
-      color: clr(neutral, 900);
-    }
+  &.sticky {
+    color: clr(neutral, 900);
   }
 }

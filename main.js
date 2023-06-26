@@ -4,7 +4,7 @@ const scrollWatcher = document.createElement("div");
 
 const header = document.querySelector(".primary-header");
 
-const logotext = document.querySelector(".logo-text");
+const logo = document.querySelector(".logo");
 
 const navcontainer = document.querySelector(".primary-navigation-container");
 
@@ -47,7 +47,7 @@ const headerObserver = new IntersectionObserver(
     header.classList.toggle("sticky", !entries[0].isIntersecting);
     header.classList.toggle("box-shadow-1", !entries[0].isIntersecting);
     hamburger.classList.toggle("sticky", !entries[0].isIntersecting);
-    logotext.classList.toggle("sticky", !entries[0].isIntersecting);
+    logo.classList.toggle("sticky", !entries[0].isIntersecting);
     for (var i = 0; i < navlinks.length; i++) {
       navlinks[i].classList.toggle("sticky", !entries[0].isIntersecting);
     }
