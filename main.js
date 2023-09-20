@@ -104,7 +104,7 @@ function events() {
     if (window.innerWidth < 960) {
       if (
         (currentState === "closed" || !currentState) &&
-        visibility === "true"
+        visibility === "false"
       ) {
         navcontainer.setAttribute("data-visible", "false");
         nav.setAttribute("data-visible", "false");
