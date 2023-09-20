@@ -131,15 +131,11 @@ function events() {
     if (!currentState || currentState === "closed") {
       hamburger.setAttribute("data-state", "opened");
       hamburger.setAttribute("aria-expanded", "true");
-    } else {
-      hamburger.setAttribute("data-state", "closed");
-      hamburger.setAttribute("aria-expanded", "false");
-    }
-
-    if (!visibility | (visibility === "false")) {
       navcontainer.setAttribute("data-visible", "true");
       nav.setAttribute("data-visible", "true");
     } else {
+      hamburger.setAttribute("data-state", "closed");
+      hamburger.setAttribute("aria-expanded", "false");
       navcontainer.setAttribute("data-visible", "false");
       nav.setAttribute("data-visible", "false");
     }
