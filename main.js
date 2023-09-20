@@ -48,7 +48,7 @@ const headerObserver = new IntersectionObserver(
     header.classList.toggle("box-shadow-1", !entries[0].isIntersecting);
     hamburger.classList.toggle("sticky", !entries[0].isIntersecting);
     logo.classList.toggle("sticky", !entries[0].isIntersecting);
-    for (var i = 0; i < navlinks.length; i++) {
+    for (let i = 0; i < navlinks.length; i++) {
       navlinks[i].classList.toggle("sticky", !entries[0].isIntersecting);
     }
   },
@@ -111,31 +111,15 @@ function events() {
     }
   });
 
-  if (window.innerWidth < 960) {
-    for (var i = 0; i < navlinks.length; i++) {
-      navlinks[i].addEventListener("click", () => {
-        const currentState = hamburger.getAttribute("data-state");
-        const visibility =
-          nav.getAttribute("data-visible") &&
-          navcontainer.getAttribute("data-visible");
-
-        if (!currentState || currentState === "closed") {
-          hamburger.setAttribute("data-state", "opened");
-          hamburger.setAttribute("aria-expanded", "true");
-        } else {
-          hamburger.setAttribute("data-state", "closed");
-          hamburger.setAttribute("aria-expanded", "false");
-        }
-
-        if (visibility === "false") {
-          navcontainer.setAttribute("data-visible", "true");
-          nav.setAttribute("data-visible", "true");
-        } else {
-          navcontainer.setAttribute("data-visible", "false");
-          nav.setAttribute("data-visible", "false");
-        }
-      });
-    }
+  for (let i = 0; i < navlinks.length; i++) {
+    navlinks[i].addEventListener("click", () => {
+      if (window.innerWidth < 960) {
+        hamburger.setAttribute("data-state", "closed");
+        hamburger.setAttribute("aria-expanded", "false");
+        navcontainer.setAttribute("data-visible", "false");
+        nav.setAttribute("data-visible", "false");
+      }
+    });
   }
 
   hamburger.addEventListener("click", () => {
