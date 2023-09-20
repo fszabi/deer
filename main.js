@@ -26,7 +26,7 @@ const popup = document.querySelector(".popup-image");
 
 const popupimage = document.querySelector(".popup-image img");
 
-const close = document.querySelector(".popup-image i");
+const closeIcon = document.querySelector(".popup-image i");
 
 scrollWatcher.setAttribute("data-scroll-watcher", "");
 
@@ -84,29 +84,53 @@ scrollButtonObserver.observe(scrollWatcher);
 // Events on load
 
 function events() {
-  for (var i = 0; i < navlinks.length; i++) {
-    navlinks[i].addEventListener("click", () => {
-      const currentState = hamburger.getAttribute("data-state");
-      const visibility =
-        nav.getAttribute("data-visible") &&
-        navcontainer.getAttribute("data-visible");
+  if (window.innerWidth < 960) {
+    navcontainer.setAttribute("data-visible", "false");
+    nav.setAttribute("data-visible", "false");
+    hamburger.setAttribute("aria-expanded", "false");
+  } else {
+    navcontainer.removeAttribute("data-visible");
+    nav.removeAttribute("data-visible");
+    hamburger.removeAttribute("aria-expanded");
+  }
 
-      if (!currentState || currentState === "closed") {
-        hamburger.setAttribute("data-state", "opened");
-        hamburger.setAttribute("aria-expanded", "true");
-      } else {
-        hamburger.setAttribute("data-state", "closed");
-        hamburger.setAttribute("aria-expanded", "false");
-      }
+  window.addEventListener("resize", function () {
+    if (window.innerWidth < 960) {
+      navcontainer.setAttribute("data-visible", "false");
+      nav.setAttribute("data-visible", "false");
+      hamburger.setAttribute("aria-expanded", "false");
+    } else {
+      navcontainer.removeAttribute("data-visible");
+      nav.removeAttribute("data-visible");
+      hamburger.removeAttribute("aria-expanded");
+    }
+  });
 
-      if (visibility === "false") {
-        navcontainer.setAttribute("data-visible", "true");
-        nav.setAttribute("data-visible", "true");
-      } else {
-        navcontainer.setAttribute("data-visible", "false");
-        nav.setAttribute("data-visible", "false");
-      }
-    });
+  if (window.innerWidth < 960) {
+    for (var i = 0; i < navlinks.length; i++) {
+      navlinks[i].addEventListener("click", () => {
+        const currentState = hamburger.getAttribute("data-state");
+        const visibility =
+          nav.getAttribute("data-visible") &&
+          navcontainer.getAttribute("data-visible");
+
+        if (!currentState || currentState === "closed") {
+          hamburger.setAttribute("data-state", "opened");
+          hamburger.setAttribute("aria-expanded", "true");
+        } else {
+          hamburger.setAttribute("data-state", "closed");
+          hamburger.setAttribute("aria-expanded", "false");
+        }
+
+        if (visibility === "false") {
+          navcontainer.setAttribute("data-visible", "true");
+          nav.setAttribute("data-visible", "true");
+        } else {
+          navcontainer.setAttribute("data-visible", "false");
+          nav.setAttribute("data-visible", "false");
+        }
+      });
+    }
   }
 
   hamburger.addEventListener("click", () => {
@@ -159,7 +183,7 @@ function events() {
     });
   });
 
-  close.addEventListener("click", () => {
+  closeIcon.addEventListener("click", () => {
     popup.style.visibility = "hidden";
     popup.style.opacity = "0";
     body.style.overflow = "visible";
