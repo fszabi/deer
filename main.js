@@ -102,10 +102,7 @@ function events() {
       navcontainer.getAttribute("data-visible");
 
     if (window.innerWidth < 960) {
-      if (
-        (currentState === "closed" || !currentState) &&
-        visibility === "false"
-      ) {
+      if (currentState === "closed" || !currentState) {
         navcontainer.setAttribute("data-visible", "false");
         nav.setAttribute("data-visible", "false");
         hamburger.setAttribute("aria-expanded", "false");
