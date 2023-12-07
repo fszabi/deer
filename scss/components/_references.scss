@@ -2,7 +2,11 @@
 
 .references {
   --grid-gap: 3rem;
-  
+
+  img {
+    max-height: 30rem;
+  }
+
   .container {
     position: relative;
   }
@@ -12,7 +16,7 @@
     grid-template-areas: "stack";
     place-items: center;
     cursor: pointer;
-    
+
     & > img,
     & > p {
       grid-area: stack;
@@ -36,7 +40,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    background: rgb(0, 0, 0, .9);
+    background: rgb(0, 0, 0, 0.9);
     height: 100%;
     width: 100%;
     z-index: 100;
@@ -67,4 +71,3 @@
     }
   }
 }
-

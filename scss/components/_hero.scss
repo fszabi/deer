@@ -6,15 +6,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: gradients(linear, 900),
-  url("../assets/hero.jpg");
+  background: gradients(linear, 900), url("../assets/hero2.jpeg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   color: clr(primary, 400);
 }
 
-.hero {
-  background-image: gradients(linear, 900),
-  -webkit-image-set(url("../assets/hero.webp") 1x);
-}
+// .hero {
+//   background-image: gradients(linear, 900),
+//     -webkit-image-set(url("../assets/hero.webp") 1x);
+// }
