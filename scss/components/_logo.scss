@@ -1,9 +1,0 @@
-@use "../abstracts/" as *;
-
-.logo {
-  color: clr(primary, 400);
-
-  &.sticky {
-    color: clr(neutral, 900);
-  }
-}

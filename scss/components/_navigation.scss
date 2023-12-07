@@ -4,12 +4,12 @@
   --flex-column-gap: #{size(48)};
 
   a {
-    color: clr(primary, 400);
+    color: clr(primary, 900);
     transition: opacity 250ms;
     font-size: fs(500);
 
     &:is(:hover, :focus) {
-      opacity: .5;
+      opacity: 0.5;
     }
 
     &.sticky {
@@ -31,7 +31,7 @@
   z-index: 99;
   inset: 0 0 0 30%;
   padding: 10rem 2em;
-  
+
   @include mqMin(medium) {
     background-color: transparent !important;
     position: unset;
@@ -58,9 +58,9 @@
   a {
     font-size: fs(500);
     transition: opacity 250ms;
-  
+
     &:is(:hover, :focus) {
-      opacity: .5;
+      opacity: 0.5;
     }
   }
 }
