@@ -24,7 +24,7 @@ const popup = document.querySelector(".popup-image");
 
 const popupimage = document.querySelector(".popup-image img");
 
-const closeIcon = document.querySelector(".popup-image i");
+const closeIcon = document.querySelector(".close");
 
 scrollWatcher.setAttribute("data-scroll-watcher", "");
 

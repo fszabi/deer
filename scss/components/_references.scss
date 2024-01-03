@@ -77,14 +77,22 @@
     //   left: 10%;
     // }
 
-    i {
+    .close {
       position: absolute;
       top: 20px;
       right: 20px;
       z-index: 100;
       font-size: fs(900);
+      width: 70px;
+      height: 70px;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 1000px;
       line-height: 1;
       color: clr(accent, 500);
+      background-color: clr(neutral, 100);
       cursor: pointer;
     }
   }
