@@ -4,7 +4,8 @@
   --grid-gap: 3rem;
 
   img {
-    max-height: 30rem;
+    object-fit: cover;
+    height: 100%;
   }
 
   .container {
@@ -40,6 +41,7 @@
     position: fixed;
     top: 0;
     left: 0;
+    right: 0;
     background: rgb(0, 0, 0, 0.9);
     height: 100%;
     width: 100%;
@@ -52,11 +54,30 @@
       position: absolute;
       top: 50%;
       left: 50%;
+      overflow: hidden;
       transform: translate(-50%, -50%);
-      border: 5px solid clr(accent, 500);
       border-radius: 10px;
-      width: 750px;
+      object-fit: cover;
+      width: fit-content;
+      height: fit-content;
+      max-height: 90%;
       max-width: 90%;
+    }
+
+    .arrow-right,
+    .arrow-left {
+      position: fixed;
+      bottom: 10%;
+      z-index: 200;
+      cursor: pointer;
+    }
+
+    .arrow-right {
+      right: 10%;
+    }
+
+    .arrow-left {
+      left: 10%;
     }
 
     i {
