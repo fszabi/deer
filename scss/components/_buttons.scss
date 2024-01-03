@@ -26,13 +26,11 @@
   &--hamburger {
     z-index: 9999;
     overflow: hidden;
-    border: 3px solid var(--hamburger-color, #fff);
+    border: 3px solid var(--hamburger-color, clr(primary, 900));
     border-radius: 0.5rem;
     padding: 0;
     background: transparent;
     transition: border 250ms;
-
-    --hamburger-color: #{$clr-neutral-100};
 
     &[data-state="closed"] :is(.top, .bottom) {
       animation: to-open-icon 1s forwards;
@@ -98,14 +96,6 @@
     @include mqMin(medium) {
       display: none;
     }
-
-    &.sticky {
-      --hamburger-color: #{$clr-primary-900};
-    }
-  }
-
-  &--hamburger[data-state="opened"] {
-    --hamburger-color: #{$clr-primary-900};
   }
 
   &--scroll-top {
