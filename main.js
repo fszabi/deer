@@ -147,5 +147,6 @@ function events() {
     popup.style.visibility = "hidden";
     popup.style.opacity = "0";
     body.style.overflow = "visible";
+    popupimage.src = "";
   });
 }
