@@ -3,11 +3,11 @@
 }
 
 .flow[data-spacing="extra-small"] {
-  --flow-spacer: .25rem;
+  --flow-spacer: 0.25rem;
 }
 
 .flow[data-spacing="small"] {
-  --flow-spacer: .5rem;
+  --flow-spacer: 0.5rem;
 }
 
 .flow[data-spacing="medium"] {
@@ -20,4 +20,8 @@
 
 .flow[data-spacing="extra-large"] {
   --flow-spacer: 4rem;
+}
+
+.flow[data-spacing="extra-larger"] {
+  --flow-spacer: 10rem;
 }

@@ -26,10 +26,6 @@ const popupimage = document.querySelector(".popup-image img");
 
 const closeIcon = document.querySelector(".popup-image i");
 
-const leftArrow = document.querySelector(".arrow-left");
-
-const rightArrow = document.querySelector(".arrow-right");
-
 scrollWatcher.setAttribute("data-scroll-watcher", "");
 
 header.before(scrollWatcher);
@@ -137,128 +133,13 @@ function events() {
     });
   });
 
-  const kislang = [
-    "assets/kislang/kislang_1.webp",
-    "assets/kislang/kislang_2.webp",
-    "assets/kislang/kislang_3.webp",
-    "assets/kislang/kislang_4.webp",
-    "assets/kislang/kislang_5.webp",
-  ];
-
-  const tamasi = [
-    "assets/tamasi/tamasi_1.webp",
-    "assets/tamasi/tamasi_2.webp",
-    "assets/tamasi/tamasi_3.webp",
-    "assets/tamasi/tamasi_4.webp",
-    "assets/tamasi/tamasi_5.webp",
-  ];
-
-  const jaszbereny = [
-    "assets/jaszbereny/jaszbereny_1.webp",
-    "assets/jaszbereny/jaszbereny_2.webp",
-    "assets/jaszbereny/jaszbereny_3.webp",
-    "assets/jaszbereny/jaszbereny_4.webp",
-    "assets/jaszbereny/jaszbereny_5.webp",
-    "assets/jaszbereny/jaszbereny_6.webp",
-    "assets/jaszbereny/jaszbereny_7.webp",
-  ];
-
-  const petofi = [
-    "assets/petofi/petofi_1.webp",
-    "assets/petofi/petofi_2.webp",
-    "assets/petofi/petofi_3.webp",
-    "assets/petofi/petofi_4.webp",
-  ];
-
   referenceimages.forEach((image) => {
     image.addEventListener("click", () => {
       popup.style.visibility = "visible";
       popup.style.opacity = "1";
       body.style.overflow = "hidden";
       const imageSrc = image.getAttribute("src");
-      let i = 0;
-
-      if (imageSrc === "assets/kislang/kislang_1.webp") {
-        popupimage.src = kislang[i];
-
-        i = 0;
-
-        rightArrow.addEventListener("click", () => {
-          if (i < kislang.length - 1) {
-            i++;
-            popupimage.src = kislang[i];
-            console.log(i);
-          }
-        });
-
-        leftArrow.addEventListener("click", () => {
-          if (i > 0) {
-            i--;
-            popupimage.src = kislang[i];
-            console.log(i);
-          }
-        });
-      } else if (imageSrc === "assets/tamasi/tamasi_1.webp") {
-        popupimage.src = tamasi[i];
-
-        i = 0;
-
-        rightArrow.addEventListener("click", () => {
-          if (i < tamasi.length - 1) {
-            i++;
-            popupimage.src = tamasi[i];
-            console.log(i);
-          }
-        });
-
-        leftArrow.addEventListener("click", () => {
-          if (i > 0) {
-            i--;
-            popupimage.src = tamasi[i];
-            console.log(i);
-          }
-        });
-      } else if (imageSrc === "assets/jaszbereny/jaszbereny_1.webp") {
-        popupimage.src = jaszbereny[i];
-
-        i = 0;
-
-        rightArrow.addEventListener("click", () => {
-          if (i < jaszbereny.length - 1) {
-            i++;
-            popupimage.src = jaszbereny[i];
-            console.log(i);
-          }
-        });
-
-        leftArrow.addEventListener("click", () => {
-          if (i > 0) {
-            i--;
-            popupimage.src = jaszbereny[i];
-            console.log(i);
-          }
-        });
-      } else if (imageSrc === "assets/petofi/petofi_1.webp") {
-        popupimage.src = petofi[i];
-
-        i = 0;
-
-        rightArrow.addEventListener("click", () => {
-          if (i < petofi.length - 1) {
-            i++;
-            popupimage.src = petofi[i];
-            console.log(i);
-          }
-        });
-
-        leftArrow.addEventListener("click", () => {
-          if (i > 0) {
-            i--;
-            popupimage.src = petofi[i];
-            console.log(i);
-          }
-        });
-      }
+      popupimage.src = imageSrc;
     });
   });
 
