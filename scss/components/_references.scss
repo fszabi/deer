@@ -8,6 +8,7 @@
     object-fit: cover;
     max-height: 35rem;
     width: 100%;
+    cursor: pointer;
   }
 
   .container {
@@ -23,7 +24,6 @@
   }
 
   .reference {
-    cursor: pointer;
     display: grid;
     gap: size(22);
 
@@ -33,24 +33,6 @@
 
     @include mqMin(medium) {
       grid-template-rows: 70px 1fr;
-    }
-
-    & > img,
-    & > p {
-      grid-area: stack;
-    }
-
-    &:hover p {
-      opacity: 1;
-    }
-
-    p {
-      color: clr(accent, 500);
-      opacity: 0;
-      z-index: 999;
-      transition: opacity 250ms;
-      font-weight: $fw-700;
-      font-family: $ff-accent;
     }
   }
 

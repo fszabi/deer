@@ -119,24 +119,6 @@ function events() {
     }
   });
 
-  document
-    .querySelectorAll("input[required], textarea[required]")
-    .forEach((e) => {
-      e.addEventListener("focusout", () => {
-        e.style.borderColor = !!e.value
-          ? "var(--clr-neutral-100)"
-          : "var(--clr-primary-300)";
-      });
-    });
-
-  document.querySelectorAll("input[type='email']").forEach((e) => {
-    e.addEventListener("focusout", () => {
-      e.style.borderColor = !!e.value.includes("@")
-        ? "var(--clr-neutral-100)"
-        : "var(--clr-primary-300)";
-    });
-  });
-
   const kislang = [
     new URL("assets/kislang/kislang_1.webp", import.meta.url).href,
     new URL("assets/kislang/kislang_2.webp", import.meta.url).href,
