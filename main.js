@@ -22,11 +22,7 @@ const referenceImages = document.body.querySelectorAll(".reference img");
 
 const popup = document.querySelector(".popup-image");
 
-const popupSourceOne = document.querySelector(".popup-image picture .source-1");
-
-const popupSourceTwo = document.querySelector(".popup-image picture .source-2");
-
-const popupImage = document.querySelector(".popup-image picture img");
+const popupImage = document.querySelector(".popup-image img");
 
 const closeIcon = document.querySelector(".close");
 
@@ -148,9 +144,7 @@ function events() {
       imagePhoneSrc = image.getAttribute("src");
       imageSrc = image.getAttribute("src").replace("_phone", "");
 
-      popupSourceOne.srcset = imageSrc;
-      popupSourceTwo.srcset = imagePhoneSrc;
-      popupImage.src = imageSrc;
+      popupImage.srcset = `${imagePhoneSrc} 480w, ${imageSrc} 1000w`;
     });
   });
 
