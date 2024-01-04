@@ -18,11 +18,15 @@ const body = document.querySelector("body");
 
 const references = document.body.querySelectorAll(".reference");
 
-const referenceimages = document.body.querySelectorAll(".reference img");
+const referenceImages = document.body.querySelectorAll(".reference img");
 
 const popup = document.querySelector(".popup-image");
 
-const popupimage = document.querySelector(".popup-image img");
+const popupSourceOne = document.querySelector(".popup-image picture .source-1");
+
+const popupSourceTwo = document.querySelector(".popup-image picture .source-2");
+
+const popupImage = document.querySelector(".popup-image picture img");
 
 const closeIcon = document.querySelector(".close");
 
@@ -133,19 +137,20 @@ function events() {
     });
   });
 
-  referenceimages.forEach((image) => {
+  referenceImages.forEach((image) => {
     image.addEventListener("click", () => {
       popup.style.visibility = "visible";
       popup.style.opacity = "1";
       body.style.overflow = "hidden";
+      let imagePhoneSrc = "";
       let imageSrc = "";
-      if (window.innerWidth > 500) {
-        imageSrc = image.getAttribute("src").replace("_phone", "");
-      } else {
-        imageSrc = image.getAttribute("src");
-      }
 
-      popupimage.src = imageSrc;
+      imagePhoneSrc = image.getAttribute("src");
+      imageSrc = image.getAttribute("src").replace("_phone", "");
+
+      popupSourceOne.srcset = imageSrc;
+      popupSourceTwo.srcset = imagePhoneSrc;
+      popupImage.src = imageSrc;
     });
   });
 
