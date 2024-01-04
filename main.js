@@ -146,7 +146,6 @@ function events() {
       let imageSrc = "";
 
       imagePhoneSrc = image.getAttribute("src");
-      imageSrc = image.getAttribute("src").replace("_phone", "");
       imageSrc = new URL(
         image.getAttribute("src").replace("_phone", ""),
         import.meta.url
