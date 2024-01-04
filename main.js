@@ -124,17 +124,11 @@ function events() {
   });
 
   const kislang = [
-    new URL("assets/kislang/kislang_1.webp", import.meta.url).href,
-    new URL("assets/kislang/kislang_2.webp", import.meta.url).href,
-    new URL("assets/kislang/kislang_3.webp", import.meta.url).href,
-    new URL("assets/kislang/kislang_4.webp", import.meta.url).href,
-    new URL("assets/kislang/kislang_5.webp", import.meta.url).href,
-
-    // new URL("assets/kislang/kislang_1_phone.webp", import.meta.url).href,
-    // new URL("assets/kislang/kislang_2_phone.webp", import.meta.url).href,
-    // new URL("assets/kislang/kislang_3_phone.webp", import.meta.url).href,
-    // new URL("assets/kislang/kislang_4_phone.webp", import.meta.url).href,
-    // new URL("assets/kislang/kislang_5_phone.webp", import.meta.url).href,
+    "assets/kislang/kislang_1.webp",
+    "assets/kislang/kislang_2.webp",
+    "assets/kislang/kislang_3.webp",
+    "assets/kislang/kislang_4.webp",
+    "assets/kislang/kislang_5.webp",
   ];
 
   const jaszbereny = [
