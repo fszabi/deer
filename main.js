@@ -16,8 +16,6 @@ const scrollButton = document.querySelector(".btn--scroll-top");
 
 const body = document.querySelector("body");
 
-const references = document.body.querySelectorAll(".reference");
-
 const referenceImages = document.body.querySelectorAll(".reference img");
 
 const popup = document.querySelector(".popup-image");
