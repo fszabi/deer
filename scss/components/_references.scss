@@ -1,40 +1,60 @@
 @use "../abstracts/" as *;
 
 .references {
-  --grid-gap: 3rem;
+  --grid-gap: 5rem;
 
+  picture,
   img {
     object-fit: cover;
-    height: 100%;
+    max-height: 35rem;
+    width: 100%;
   }
 
   .container {
     position: relative;
   }
 
-  .reference {
-    cursor: pointer;
+  h3 {
+    line-height: 1.3;
 
-    // & > img,
-    // & > p {
-    //   grid-area: stack;
-    // }
-
-    // &:hover p {
-    //   opacity: 1;
-    // }
-
-    // p {
-    //   color: clr(accent, 500);
-    //   opacity: 0;
-    //   z-index: 999;
-    //   transition: opacity 250ms;
-    //   font-weight: $fw-700;
-    //   font-family: $ff-accent;
-    // }
+    @include mqMax(small) {
+      text-align: center;
+    }
   }
 
-  .popup-image {
+  .reference {
+    cursor: pointer;
+    display: grid;
+    gap: size(22);
+
+    @include mqMin(small) {
+      grid-template-rows: 90px 1fr;
+    }
+
+    @include mqMin(medium) {
+      grid-template-rows: 70px 1fr;
+    }
+
+    & > img,
+    & > p {
+      grid-area: stack;
+    }
+
+    &:hover p {
+      opacity: 1;
+    }
+
+    p {
+      color: clr(accent, 500);
+      opacity: 0;
+      z-index: 999;
+      transition: opacity 250ms;
+      font-weight: $fw-700;
+      font-family: $ff-accent;
+    }
+  }
+
+  .popup {
     position: fixed;
     top: 0;
     left: 0;
@@ -61,21 +81,21 @@
       max-width: 90%;
     }
 
-    // .arrow-right,
-    // .arrow-left {
-    //   position: fixed;
-    //   bottom: 10%;
-    //   z-index: 200;
-    //   cursor: pointer;
-    // }
+    .arrow-right,
+    .arrow-left {
+      position: fixed;
+      bottom: 10%;
+      z-index: 200;
+      cursor: pointer;
+    }
 
-    // .arrow-right {
-    //   right: 10%;
-    // }
+    .arrow-right {
+      right: 10%;
+    }
 
-    // .arrow-left {
-    //   left: 10%;
-    // }
+    .arrow-left {
+      left: 10%;
+    }
 
     .close {
       position: absolute;
