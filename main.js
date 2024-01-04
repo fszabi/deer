@@ -1,20 +1,34 @@
 window.onload = events;
 
 const scrollWatcher = document.createElement("div");
-
 const header = document.querySelector(".primary-header");
-
 const navcontainer = document.querySelector(".primary-navigation-container");
-
 const nav = document.querySelector(".primary-navigation");
-
 const navlinks = document.body.querySelectorAll(".primary-navigation a");
-
 const hamburger = document.querySelector(".btn--hamburger");
-
 const scrollButton = document.querySelector(".btn--scroll-top");
-
 const body = document.querySelector("body");
+const kislangImg = document.body.querySelector(".kislang picture img");
+const kislangPopup = document.body.querySelector(".kislang-popup");
+const kislangPopupImg = document.body.querySelector(".kislang-popup img");
+const jaszberenyImg = document.body.querySelector(".jaszbereny picture img");
+const jaszberenyPopup = document.body.querySelector(".jaszbereny-popup");
+const jaszberenyPopupImg = document.body.querySelector(".jaszbereny-popup img");
+const petofiImg = document.body.querySelector(".petofi picture img");
+const petofiPopup = document.body.querySelector(".petofi-popup");
+const petofiPopupImg = document.body.querySelector(".petofi-popup img");
+const tamasiImg = document.body.querySelector(".tamasi picture img");
+const tamasiPopup = document.body.querySelector(".tamasi-popup");
+const tamasiPopupImg = document.body.querySelector(".tamasi-popup img");
+const trianonImg = document.body.querySelector(".trianon picture img");
+const trianonPopup = document.body.querySelector(".trianon-popup");
+const trianonPopupImg = document.body.querySelector(".trianon-popup img");
+
+const closeIcon = document.querySelectorAll(".close");
+
+const leftArrow = document.querySelectorAll(".arrow-left");
+
+const rightArrow = document.querySelectorAll(".arrow-right");
 
 scrollWatcher.setAttribute("data-scroll-watcher", "");
 
@@ -159,34 +173,6 @@ function events() {
   const trianon = [
     new URL("assets/trianon/trianon.webp", import.meta.url).href,
   ];
-
-  const kislangImg = document.body.querySelector(".kislang picture img");
-  const kislangPopup = document.body.querySelector(".kislang-popup");
-  const kislangPopupImg = document.body.querySelector(".kislang-popup img");
-
-  const jaszberenyImg = document.body.querySelector(".jaszbereny picture img");
-  const jaszberenyPopup = document.body.querySelector(".jaszbereny-popup");
-  const jaszberenyPopupImg = document.body.querySelector(
-    ".jaszbereny-popup img"
-  );
-
-  const petofiImg = document.body.querySelector(".petofi picture img");
-  const petofiPopup = document.body.querySelector(".petofi-popup");
-  const petofiPopupImg = document.body.querySelector(".petofi-popup img");
-
-  const tamasiImg = document.body.querySelector(".tamasi picture img");
-  const tamasiPopup = document.body.querySelector(".tamasi-popup");
-  const tamasiPopupImg = document.body.querySelector(".tamasi-popup img");
-
-  const trianonImg = document.body.querySelector(".trianon picture img");
-  const trianonPopup = document.body.querySelector(".trianon-popup");
-  const trianonPopupImg = document.body.querySelector(".trianon-popup img");
-
-  const closeIcon = document.querySelectorAll(".close");
-
-  const leftArrow = document.querySelectorAll(".arrow-left");
-
-  const rightArrow = document.querySelectorAll(".arrow-right");
 
   kislangImg.addEventListener("click", () => {
     kislangPopup.style.visibility = "visible";
