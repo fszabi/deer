@@ -138,7 +138,13 @@ function events() {
       popup.style.visibility = "visible";
       popup.style.opacity = "1";
       body.style.overflow = "hidden";
-      const imageSrc = image.getAttribute("src");
+      let imageSrc = "";
+      if (window.innerWidth > 500) {
+        imageSrc = image.getAttribute("src").replace("_phone", "");
+      } else {
+        imageSrc = image.getAttribute("src");
+      }
+
       popupimage.src = imageSrc;
     });
   });
@@ -147,6 +153,5 @@ function events() {
     popup.style.visibility = "hidden";
     popup.style.opacity = "0";
     body.style.overflow = "visible";
-    popupimage.src = "";
   });
 }
