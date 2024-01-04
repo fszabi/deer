@@ -20,11 +20,7 @@ const referenceImages = document.body.querySelectorAll(".reference img");
 
 const popup = document.querySelector(".popup-image");
 
-const popupSourceOne = document.querySelector(".popup-image picture .source-1");
-
-const popupSourceTwo = document.querySelector(".popup-image picture .source-2");
-
-const popupImage = document.querySelector(".popup-image picture img");
+const popupImage = document.querySelector(".popup-image img");
 
 const closeIcon = document.querySelector(".close");
 
@@ -140,14 +136,10 @@ function events() {
       popup.style.visibility = "visible";
       popup.style.opacity = "1";
       body.style.overflow = "hidden";
-      let imagePhoneSrc = "";
       let imageSrc = "";
 
-      imagePhoneSrc = image.getAttribute("src");
-      imageSrc = image.getAttribute("src").replace("_phone", "");
+      imageSrc = image.getAttribute("src");
 
-      popupSourceOne.srcset = imageSrc;
-      popupSourceTwo.srcset = imagePhoneSrc;
       popupImage.src = imageSrc;
     });
   });
