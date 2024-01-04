@@ -124,39 +124,41 @@ function events() {
   });
 
   const kislang = [
-    "assets/kislang/kislang_1.webp",
-    "assets/kislang/kislang_2.webp",
-    "assets/kislang/kislang_3.webp",
-    "assets/kislang/kislang_4.webp",
-    "assets/kislang/kislang_5.webp",
+    new URL("assets/kislang/kislang_1.webp", import.meta.url).href,
+    new URL("assets/kislang/kislang_2.webp", import.meta.url).href,
+    new URL("assets/kislang/kislang_3.webp", import.meta.url).href,
+    new URL("assets/kislang/kislang_4.webp", import.meta.url).href,
+    new URL("assets/kislang/kislang_5.webp", import.meta.url).href,
   ];
 
   const jaszbereny = [
-    "assets/jaszbereny/jaszbereny_1.webp",
-    "assets/jaszbereny/jaszbereny_2.webp",
-    "assets/jaszbereny/jaszbereny_3.webp",
-    "assets/jaszbereny/jaszbereny_4.webp",
-    "assets/jaszbereny/jaszbereny_5.webp",
-    "assets/jaszbereny/jaszbereny_6.webp",
-    "assets/jaszbereny/jaszbereny_7.webp",
+    new URL("assets/jaszbereny/jaszbereny_1.webp", import.meta.url).href,
+    new URL("assets/jaszbereny/jaszbereny_2.webp", import.meta.url).href,
+    new URL("assets/jaszbereny/jaszbereny_3.webp", import.meta.url).href,
+    new URL("assets/jaszbereny/jaszbereny_4.webp", import.meta.url).href,
+    new URL("assets/jaszbereny/jaszbereny_5.webp", import.meta.url).href,
+    new URL("assets/jaszbereny/jaszbereny_6.webp", import.meta.url).href,
+    new URL("assets/jaszbereny/jaszbereny_7.webp", import.meta.url).href,
   ];
 
   const petofi = [
-    "assets/petofi/petofi_1.webp",
-    "assets/petofi/petofi_2.webp",
-    "assets/petofi/petofi_3.webp",
-    "assets/petofi/petofi_4.webp",
+    new URL("assets/petofi/petofi_1.webp", import.meta.url).href,
+    new URL("assets/petofi/petofi_2.webp", import.meta.url).href,
+    new URL("assets/petofi/petofi_3.webp", import.meta.url).href,
+    new URL("assets/petofi/petofi_4.webp", import.meta.url).href,
   ];
 
   const tamasi = [
-    "assets/tamasi/tamasi_1.webp",
-    "assets/tamasi/tamasi_2.webp",
-    "assets/tamasi/tamasi_3.webp",
-    "assets/tamasi/tamasi_4.webp",
-    "assets/tamasi/tamasi_5.webp",
+    new URL("assets/tamasi/tamasi_1.webp", import.meta.url).href,
+    new URL("assets/tamasi/tamasi_2.webp", import.meta.url).href,
+    new URL("assets/tamasi/tamasi_3.webp", import.meta.url).href,
+    new URL("assets/tamasi/tamasi_4.webp", import.meta.url).href,
+    new URL("assets/tamasi/tamasi_5.webp", import.meta.url).href,
   ];
 
-  const trianon = ["assets/trianon/trianon.webp"];
+  const trianon = [
+    new URL("assets/trianon/trianon.webp", import.meta.url).href,
+  ];
 
   const kislangImg = document.body.querySelector(".kislang picture img");
   const kislangPopup = document.body.querySelector(".kislang-popup");
