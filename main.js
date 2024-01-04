@@ -22,7 +22,11 @@ const referenceImages = document.body.querySelectorAll(".reference img");
 
 const popup = document.querySelector(".popup-image");
 
-const popupImage = document.querySelector(".popup-image img");
+const popupSourceOne = document.querySelector(".popup-image picture .source-1");
+
+const popupSourceTwo = document.querySelector(".popup-image picture .source-2");
+
+const popupImage = document.querySelector(".popup-image picture img");
 
 const closeIcon = document.querySelector(".close");
 
@@ -133,6 +137,41 @@ function events() {
     });
   });
 
+  const kislang = [
+    new URL("assets/kislang/kislang_1.webp", import.meta.url).href,
+    new URL("assets/kislang/kislang_2.webp", import.meta.url).href,
+    new URL("assets/kislang/kislang_3.webp", import.meta.url).href,
+    new URL("assets/kislang/kislang_4.webp", import.meta.url).href,
+    new URL("assets/kislang/kislang_5.webp", import.meta.url).href,
+  ];
+
+  const jaszbereny = [
+    new URL("assets/jaszbereny/jaszbereny_1.webp", import.meta.url).href,
+    new URL("assets/jaszbereny/jaszbereny_2.webp", import.meta.url).href,
+    new URL("assets/jaszbereny/jaszbereny_3.webp", import.meta.url).href,
+    new URL("assets/jaszbereny/jaszbereny_4.webp", import.meta.url).href,
+    new URL("assets/jaszbereny/jaszbereny_5.webp", import.meta.url).href,
+    new URL("assets/jaszbereny/jaszbereny_6.webp", import.meta.url).href,
+    new URL("assets/jaszbereny/jaszbereny_7.webp", import.meta.url).href,
+  ];
+
+  const petofi = [
+    new URL("assets/petofi/petofi_1.webp", import.meta.url).href,
+    new URL("assets/petofi/petofi_2.webp", import.meta.url).href,
+    new URL("assets/petofi/petofi_3.webp", import.meta.url).href,
+    new URL("assets/petofi/petofi_4.webp", import.meta.url).href,
+  ];
+
+  const tamasi = [
+    new URL("assets/tamasi/tamasi_1.webp", import.meta.url).href,
+    new URL("assets/tamasi/tamasi_2.webp", import.meta.url).href,
+    new URL("assets/tamasi/tamasi_3.webp", import.meta.url).href,
+    new URL("assets/tamasi/tamasi_4.webp", import.meta.url).href,
+    new URL("assets/tamasi/tamasi_5.webp", import.meta.url).href,
+  ];
+
+  const trianon = [new URL("assets/tamasi/trianon.webp", import.meta.url).href];
+
   referenceImages.forEach((image) => {
     image.addEventListener("click", () => {
       popup.style.visibility = "visible";
@@ -144,7 +183,9 @@ function events() {
       imagePhoneSrc = image.getAttribute("src");
       imageSrc = image.getAttribute("src").replace("_phone", "");
 
-      popupImage.srcset = `${imagePhoneSrc} 480w, ${imageSrc} 1000w`;
+      popupSourceOne.srcset = imageSrc;
+      popupSourceTwo.srcset = imagePhoneSrc;
+      popupImage.src = imageSrc;
     });
   });
 
