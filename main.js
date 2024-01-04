@@ -208,7 +208,6 @@ function events() {
 
       imagePhoneSrc = image.getAttribute("src");
       imageSrc = image.getAttribute("src").replace("_phone", "");
-      imageSrc = image.getAttribute("src");
 
       popupSourceOne.srcset = imageSrc;
       popupSourceTwo.srcset = imagePhoneSrc;
