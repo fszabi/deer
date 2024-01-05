@@ -167,17 +167,19 @@ function events() {
     rightArrow[0].addEventListener("click", () => {
       if (i < kislang.length - 1) {
         i++;
-        kislangPopupImg.src = kislang[i];
-        console.log(i);
+      } else {
+        i = 0;
       }
+      kislangPopupImg.src = kislang[i];
     });
 
     leftArrow[0].addEventListener("click", () => {
       if (i > 0) {
         i--;
-        kislangPopupImg.src = kislang[i];
-        console.log(i);
+      } else {
+        i = kislang.length - 1;
       }
+      kislangPopupImg.src = kislang[i];
     });
 
     closeIcon[0].addEventListener("click", () => {
@@ -199,17 +201,19 @@ function events() {
     rightArrow[1].addEventListener("click", () => {
       if (i < jaszbereny.length - 1) {
         i++;
-        jaszberenyPopupImg.src = jaszbereny[i];
-        console.log(i);
+      } else {
+        i = 0;
       }
+      jaszberenyPopupImg.src = jaszbereny[i];
     });
 
     leftArrow[1].addEventListener("click", () => {
       if (i > 0) {
         i--;
-        jaszberenyPopupImg.src = jaszbereny[i];
-        console.log(i);
+      } else {
+        i = jaszbereny.length - 1;
       }
+      jaszberenyPopupImg.src = jaszbereny[i];
     });
 
     closeIcon[1].addEventListener("click", () => {
@@ -231,17 +235,19 @@ function events() {
     rightArrow[2].addEventListener("click", () => {
       if (i < petofi.length - 1) {
         i++;
-        petofiPopupImg.src = petofi[i];
-        console.log(i);
+      } else {
+        i = 0;
       }
+      petofiPopupImg.src = petofi[i];
     });
 
     leftArrow[2].addEventListener("click", () => {
       if (i > 0) {
         i--;
-        petofiPopupImg.src = petofi[i];
-        console.log(i);
+      } else {
+        i = petofi.length - 1;
       }
+      petofiPopupImg.src = petofi[i];
     });
 
     closeIcon[2].addEventListener("click", () => {
@@ -263,17 +269,19 @@ function events() {
     rightArrow[3].addEventListener("click", () => {
       if (i < tamasi.length - 1) {
         i++;
-        tamasiPopupImg.src = tamasi[i];
-        console.log(i);
+      } else {
+        i = 0;
       }
+      tamasiPopupImg.src = tamasi[i];
     });
 
     leftArrow[3].addEventListener("click", () => {
       if (i > 0) {
         i--;
-        tamasiPopupImg.src = tamasi[i];
-        console.log(i);
+      } else {
+        i = tamasi.length - 1;
       }
+      tamasiPopupImg.src = tamasi[i];
     });
 
     closeIcon[3].addEventListener("click", () => {
