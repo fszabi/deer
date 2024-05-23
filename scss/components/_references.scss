@@ -9,6 +9,10 @@
     max-height: 35rem;
     width: 100%;
     cursor: pointer;
+
+    @include mqMin(small) {
+      height: 35rem;
+    }
   }
 
   .container {

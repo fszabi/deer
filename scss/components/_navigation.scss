@@ -11,10 +11,6 @@
     &:is(:hover, :focus) {
       opacity: 0.5;
     }
-
-    &.sticky {
-      color: clr(primary, 900);
-    }
   }
 }
 

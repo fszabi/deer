@@ -1,9 +1,15 @@
+@use "../abstracts/" as *;
+
 .about {
   --grid-gap: 4rem;
-}
 
-img {
-  height: 50rem;
-  width: 100%;
-  object-fit: cover;
+  img {
+    height: 30rem;
+    width: 100%;
+    object-fit: cover;
+
+    @include mqMin(small) {
+      height: 50rem;
+    }
+  }
 }

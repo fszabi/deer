@@ -5,7 +5,7 @@
     display: grid;
     grid-auto-columns: 1fr;
     gap: size(48);
-    
+
     @include mqMin(medium) {
       grid-template-columns: auto 1fr;
       gap: size(160);
@@ -40,10 +40,27 @@
       height: 30px;
       padding: 1.5rem;
       border-radius: 50%;
-      box-shadow:
-      0px 6px 5px rgb(0, 0, 0, 0.02),
-      0px 22px 18px rgb(0, 0, 0, 0.03),
-      0px 100px 80px rgb(0, 0, 0, 0.05);
+      box-shadow: 0px 6px 5px rgb(0, 0, 0, 0.02),
+        0px 22px 18px rgb(0, 0, 0, 0.03), 0px 100px 80px rgb(0, 0, 0, 0.05);
+    }
+  }
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+    column-gap: size(12);
+    font-size: fs(500);
+
+    a {
+      transition: opacity 300ms;
+
+      &:is(:hover, :focus) {
+        opacity: 0.5;
+      }
+    }
+
+    .webrebirth-logo {
+      height: 40px;
     }
   }
 }
