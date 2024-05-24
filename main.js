@@ -8,6 +8,35 @@ const navlinks = document.body.querySelectorAll(".primary-navigation a");
 const hamburger = document.querySelector(".btn--hamburger");
 const scrollButton = document.querySelector(".btn--scroll-top");
 const body = document.querySelector("body");
+
+const epuletszobraszat = document.body.querySelector(".epuletszobraszat");
+const epuletszobraszatPopup = document.body.querySelector(
+  ".epuletszobraszat-popup"
+);
+const epuletszobraszatPopupImg = document.body.querySelector(
+  ".epuletszobraszat-popup img"
+);
+const szobraszat = document.body.querySelector(".szobraszat");
+const szobraszatPopup = document.body.querySelector(".szobraszat-popup");
+const szobraszatPopupImg = document.body.querySelector(".szobraszat-popup img");
+const emlekmu = document.body.querySelector(".emlekmu");
+const emlekmuPopup = document.body.querySelector(".emlekmu-popup");
+const emlekmuPopupImg = document.body.querySelector(".emlekmu-popup img");
+const muemlek = document.body.querySelector(".muemlek");
+const muemlekPopup = document.body.querySelector(".muemlek-popup");
+const muemlekPopupImg = document.body.querySelector(".muemlek-popup img");
+const templom = document.body.querySelector(".templom");
+const templomPopup = document.body.querySelector(".templom-popup");
+const templomPopupImg = document.body.querySelector(".templom-popup img");
+const fresko = document.body.querySelector(".fresko");
+const freskoPopup = document.body.querySelector(".fresko-popup");
+const freskoPopupImg = document.body.querySelector(".fresko-popup img");
+const olajfestmeny = document.body.querySelector(".olajfestmeny");
+const olajfestmenyPopup = document.body.querySelector(".olajfestmeny-popup");
+const olajfestmenyPopupImg = document.body.querySelector(
+  ".olajfestmeny-popup img"
+);
+
 const kislangImg = document.body.querySelector(".kislang picture img");
 const kislangPopup = document.body.querySelector(".kislang-popup");
 const kislangPopupImg = document.body.querySelector(".kislang-popup img");
@@ -25,19 +54,12 @@ const trianonPopup = document.body.querySelector(".trianon-popup");
 const trianonPopupImg = document.body.querySelector(".trianon-popup img");
 
 const closeIcon = document.querySelectorAll(".close");
-
 const leftArrow = document.querySelectorAll(".arrow-left");
-
 const rightArrow = document.querySelectorAll(".arrow-right");
-
-scrollWatcher.setAttribute("data-scroll-watcher", "");
-
-header.before(scrollWatcher);
 
 // Header
 
 scrollWatcher.setAttribute("data-scroll-watcher", "");
-
 header.before(scrollWatcher);
 
 // Scroll top button
@@ -119,6 +141,113 @@ function events() {
     }
   });
 
+  epuletszobraszat.addEventListener("click", () => {
+    epuletszobraszatPopup.style.visibility = "visible";
+    epuletszobraszatPopup.style.opacity = "1";
+    body.style.overflow = "hidden";
+
+    epuletszobraszatPopupImg.src = new URL(
+      "assets/epuletszobraszat.webp",
+      import.meta.url
+    ).href;
+
+    closeIcon[0].addEventListener("click", () => {
+      epuletszobraszatPopup.style.visibility = "hidden";
+      epuletszobraszatPopup.style.opacity = "0";
+      body.style.overflow = "visible";
+    });
+  });
+
+  szobraszat.addEventListener("click", () => {
+    szobraszatPopup.style.visibility = "visible";
+    szobraszatPopup.style.opacity = "1";
+    body.style.overflow = "hidden";
+
+    szobraszatPopupImg.src = new URL(
+      "assets/szobraszat.webp",
+      import.meta.url
+    ).href;
+
+    closeIcon[1].addEventListener("click", () => {
+      szobraszatPopup.style.visibility = "hidden";
+      szobraszatPopup.style.opacity = "0";
+      body.style.overflow = "visible";
+    });
+  });
+
+  emlekmu.addEventListener("click", () => {
+    emlekmuPopup.style.visibility = "visible";
+    emlekmuPopup.style.opacity = "1";
+    body.style.overflow = "hidden";
+
+    emlekmuPopupImg.src = new URL("assets/emlekmu.webp", import.meta.url).href;
+
+    closeIcon[2].addEventListener("click", () => {
+      emlekmuPopup.style.visibility = "hidden";
+      emlekmuPopup.style.opacity = "0";
+      body.style.overflow = "visible";
+    });
+  });
+
+  muemlek.addEventListener("click", () => {
+    muemlekPopup.style.visibility = "visible";
+    muemlekPopup.style.opacity = "1";
+    body.style.overflow = "hidden";
+
+    muemlekPopupImg.src = new URL("assets/muemlek.webp", import.meta.url).href;
+
+    closeIcon[3].addEventListener("click", () => {
+      muemlekPopup.style.visibility = "hidden";
+      muemlekPopup.style.opacity = "0";
+      body.style.overflow = "visible";
+    });
+  });
+
+  templom.addEventListener("click", () => {
+    templomPopup.style.visibility = "visible";
+    templomPopup.style.opacity = "1";
+    body.style.overflow = "hidden";
+
+    templomPopupImg.src = new URL("assets/templom.webp", import.meta.url).href;
+
+    closeIcon[4].addEventListener("click", () => {
+      templomPopup.style.visibility = "hidden";
+      templomPopup.style.opacity = "0";
+      body.style.overflow = "visible";
+    });
+  });
+
+  fresko.addEventListener("click", () => {
+    freskoPopup.style.visibility = "visible";
+    freskoPopup.style.opacity = "1";
+    body.style.overflow = "hidden";
+
+    freskoPopupImg.src = new URL("assets/fresko.webp", import.meta.url).href;
+
+    closeIcon[5].addEventListener("click", () => {
+      freskoPopup.style.visibility = "hidden";
+      freskoPopup.style.opacity = "0";
+      body.style.overflow = "visible";
+    });
+  });
+
+  olajfestmeny.addEventListener("click", () => {
+    olajfestmenyPopup.style.visibility = "visible";
+    olajfestmenyPopup.style.opacity = "1";
+    body.style.overflow = "hidden";
+
+    olajfestmenyPopupImg.src = new URL(
+      "assets/olajfestmeny.webp",
+      import.meta.url
+    ).href;
+
+    closeIcon[6].addEventListener("click", () => {
+      olajfestmenyPopup.style.visibility = "hidden";
+      olajfestmenyPopup.style.opacity = "0";
+      body.style.overflow = "visible";
+    });
+  });
+
   const kislang = [
     new URL("assets/kislang/kislang_1.webp", import.meta.url).href,
     new URL("assets/kislang/kislang_2.webp", import.meta.url).href,
@@ -182,7 +311,7 @@ function events() {
       kislangPopupImg.src = kislang[i];
     });
 
-    closeIcon[0].addEventListener("click", () => {
+    closeIcon[7].addEventListener("click", () => {
       kislangPopup.style.visibility = "hidden";
       kislangPopup.style.opacity = "0";
       body.style.overflow = "visible";
@@ -216,7 +345,7 @@ function events() {
       jaszberenyPopupImg.src = jaszbereny[i];
     });
 
-    closeIcon[1].addEventListener("click", () => {
+    closeIcon[8].addEventListener("click", () => {
       jaszberenyPopup.style.visibility = "hidden";
       jaszberenyPopup.style.opacity = "0";
       body.style.overflow = "visible";
@@ -250,7 +379,7 @@ function events() {
       petofiPopupImg.src = petofi[i];
     });
 
-    closeIcon[2].addEventListener("click", () => {
+    closeIcon[9].addEventListener("click", () => {
       petofiPopup.style.visibility = "hidden";
       petofiPopup.style.opacity = "0";
       body.style.overflow = "visible";
@@ -284,7 +413,7 @@ function events() {
       tamasiPopupImg.src = tamasi[i];
     });
 
-    closeIcon[3].addEventListener("click", () => {
+    closeIcon[10].addEventListener("click", () => {
       tamasiPopup.style.visibility = "hidden";
       tamasiPopup.style.opacity = "0";
       body.style.overflow = "visible";
@@ -300,7 +429,7 @@ function events() {
     let i = 0;
     trianonPopupImg.src = trianon[i];
 
-    closeIcon[4].addEventListener("click", () => {
+    closeIcon[11].addEventListener("click", () => {
       trianonPopup.style.visibility = "hidden";
       trianonPopup.style.opacity = "0";
       body.style.overflow = "visible";
